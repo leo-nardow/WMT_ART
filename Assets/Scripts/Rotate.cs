@@ -28,11 +28,11 @@ public class Rotate : MonoBehaviour
         isMouseDown = false;
         if (turningDirection == 1)
         {
-            Speed = -20.0f;
+            Speed = -1000.0f;
         }
         else if (turningDirection == -1)
         {
-            Speed = 20.0f;
+            Speed = 1000.0f;
         }
     }
 
@@ -42,14 +42,8 @@ public class Rotate : MonoBehaviour
         pos = Input.mousePosition - pos;
         float ang = Mathf.Atan2(pos.y, pos.x) * Mathf.Rad2Deg - baseAngle;
         transform.rotation = Quaternion.AngleAxis(ang, Vector3.forward);
-
-        // Calculate the drag direction as the vector from the starting position to the current position.
         Vector3 dragDirection = (Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position)).normalized;
-
-        // Calculate the angle between the initial drag direction and the current drag direction.
         float angle = Vector3.SignedAngle(initialDragDirection, dragDirection, Vector3.forward);
-
-        // Determine whether it was dragged clockwise or counterclockwise.
         if (angle > 0)
         {
             turningDirection = -1;
@@ -60,18 +54,17 @@ public class Rotate : MonoBehaviour
             turningDirection = 1;
             Debug.Log("Dragged clockwise");
         }
-        // Update the initial drag direction for the next frame.
         initialDragDirection = dragDirection;
     }
 
     void Update()
+{
+    if (!isMouseDown && turningDirection != 0)
     {
-
-        if (!isMouseDown && turningDirection != 0)
-        {
-            transform.RotateAround(Vector3.forward, Speed * Time.deltaTime);
-            Speed = Mathf.Lerp(Speed, 0.0f, Time.deltaTime);
-        }
+        transform.Rotate(Vector3.forward, Speed * Time.deltaTime);
+        Speed = Mathf.Lerp(Speed, 0.0f, Time.deltaTime);
     }
+}
+
 
 }
