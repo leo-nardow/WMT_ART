@@ -6,7 +6,7 @@ public struct SoundParameters
 {
     [Range(0, 1)]
     public float Volume;
-    [Range(-3, 3)]
+    [Range(0.5f, 2)]
     public float Pitch;
     public bool Loop;
 }
@@ -34,8 +34,8 @@ public class Sound
         Source.clip = Clip;
 
         Source.volume = Parameters.Volume;
-        Source.pitch = Parameters.Pitch;
         Source.loop = Parameters.Loop;
+        if(Parameters.Pitch != 0) Source.pitch = Parameters.Pitch;
 
         Source.Play();
     }
