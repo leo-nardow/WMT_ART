@@ -170,32 +170,13 @@ public class UIManager : MonoBehaviour {
                 uIElements.ResolutionBG.color = parameters.FinalBGColor;
                 uIElements.ResolutionStateInfoText.text = "PONTUAÇÃO FINAL";
 
-                StartCoroutine(CalculateScore());
                 uIElements.FinishUIElements.gameObject.SetActive(true);
                 uIElements.HighScoreText.gameObject.SetActive(true);
+                uIElements.ResolutionScoreText.text = events.CurrentFinalScore.ToString();
                 uIElements.HighScoreText.text = ((highscore > events.StartupHighscore) ? "<color=yellow>new </color>" : string.Empty) + "Highscore: " + highscore;
                 break;
         }
     }
-
-    /// <summary>
-    /// Function that is used to calculate and display the score.
-    /// </summary>
-    IEnumerator CalculateScore()
-    {
-        var scoreValue = 0;
-        while (scoreValue < events.CurrentFinalScore)
-        {
-            scoreValue++;
-            uIElements.ResolutionScoreText.text = scoreValue.ToString();
-
-            yield return null;
-        }
-    }
-
-    /// <summary>
-    /// Function that is used to create new question answers.
-    /// </summary>
     void CreateAnswers(Question question)
     {
         EraseAnswers();
