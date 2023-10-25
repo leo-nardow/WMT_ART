@@ -1,17 +1,23 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BadgeManager : MonoBehaviour
 {
-    public int[,] itens = new int[12,12];
+    public int[,] badges = new int[12,12];
+    public Text pointText;
 
     void Start()
     {
-        var shopManager = GameObject.Find("ShopManager").GetComponent<ShopManagerScript>();
-        itens = shopManager.itens;
-    }
+        badges = GameManager.Instance.GetBadges();
+        pointText.text = "Pontos: " + GameManager.Instance.GetPoints().ToString();
 
-    void Update()
-    {
-        
+        foreach (EArtType tipoArte in Enum.GetValues(typeof(EArtType)))
+        {
+            if (badges[(int)EItemType.Quantity, (int)tipoArte] == 0)
+            {
+                GameObject.Find(tipoArte.ToString()).GetComponent<RawImage>().color = Color.black;
+            }
+        }
     }
 }

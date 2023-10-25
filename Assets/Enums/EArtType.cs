@@ -1,4 +1,4 @@
-public enum ETipoArte
+public enum EArtType
 {
     ArteContemporanea = 1,
     Expressionismo,
