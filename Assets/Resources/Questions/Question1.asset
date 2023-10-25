@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1e3773ddaa9ce48835846fb8e11c7f, type: 3}
+  m_Name: Question1
+  m_EditorClassIdentifier: 
+  _info: "Dentro das v\xE1rias vertentes da arte contempor\xE2nea, algumas caracter\xEDsticas
+    podem ser vistas com frequ\xEAncia, EXCETO:"
+  _answers:
+  - _info: "Aus\xEAncia de novas m\xEDdias, tecnologias e materiais\r\n"
+    _isCorrect: 1
+  - _info: "Efemeridade e questionamento sobre defini\xE7\xF5es do que \xE9 arte\r\n"
+    _isCorrect: 0
+  - _info: "Liberdade art\xEDstica e quebra de paradigmas.\r\n"
+    _isCorrect: 0
+  - _info: " Uni\xE3o da arte com a cultura de massa, popular\r\n"
+    _isCorrect: 0
+  _useTimer: 1
+  _timer: 30
+  _answerType: 1
+  _addScore: 10

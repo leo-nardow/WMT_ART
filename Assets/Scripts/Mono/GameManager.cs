@@ -284,14 +284,15 @@ public class GameManager : MonoBehaviour {
     /// </summary>
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("SampleScene");
     }
     /// <summary>
     /// Function that is called to quit the application.
     /// </summary>
     public void QuitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("intro_scene");
     }
 
     /// <summary>

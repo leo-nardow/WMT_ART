@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1e3773ddaa9ce48835846fb8e11c7f, type: 3}
+  m_Name: MoonRadius
+  m_EditorClassIdentifier: 
+  _info: "O Expressionismo se destacou por sua abordagem emocional, subjetiva e muitas
+    vezes perturbadora da representa\xE7\xE3o da realidade. Ao contr\xE1rio das representa\xE7\xF5es
+    realistas tradicionais, os artistas expressionistas buscavam expressar emo\xE7\xF5es
+    profundas, ang\xFAstias e estados de esp\xEDrito internos por meio de suas obras.
+    S\xE3o caracteristicas do expressionismo:"
+  _answers:
+  - _info: "Exclus\xE3o da Emo\xE7\xE3o e Subjetividade"
+    _isCorrect: 0
+  - _info: Fidelidade a Realidade
+    _isCorrect: 0
+  - _info: Temas Alegres
+    _isCorrect: 0
+  - _info: "Deforma\xE7\xE3o da realidade"
+    _isCorrect: 1
+  _useTimer: 1
+  _timer: 30
+  _answerType: 1
+  _addScore: 10
