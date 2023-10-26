@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -973,7 +973,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Neste desafio interativo, voc\xEA mergulhar\xE1 no incr\xEDvel mundo dos
     movimentos art\xEDsticos. Responda a uma s\xE9rie de perguntas sobre esses movimentos
-    e colete pontos para desbloquear as ins\xEDgnias exclusivas de cada um!"
+    e colete pontos para desbloquear os badges exclusivos de cada um!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cdb36e2a00637104289878edb9d0caf6, type: 2}
   m_sharedMaterial: {fileID: 8653612015129109692, guid: cdb36e2a00637104289878edb9d0caf6, type: 2}
