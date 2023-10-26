@@ -54,8 +54,9 @@ public class GameManagerBadges : MonoBehaviour
 
     private void GenerateQuestions()
     {
-        string json = File.ReadAllText("C:\\Users\\casju\\Documents\\UFABC\\WMT_ART\\Assets\\Scripts\\Questoes_json.json"); // alterar caminho do JSON
-        _questions = JsonConvert.DeserializeObject<List<QuestionObject>>(json);
+        TextAsset jsonFile = Resources.Load<TextAsset>("Questoes_json");
+        //string json = File.ReadAllText("C:\\Users\\casju\\Documents\\UFABC\\WMT_ART\\Assets\\Scripts\\Questoes_json.json"); // alterar caminho do JSON
+        _questions = JsonConvert.DeserializeObject<List<QuestionObject>>(jsonFile.ToString());
         for (int i = 0; i < _questions.Count; i++)
         {
             _questions[i].Index = i + 1;
