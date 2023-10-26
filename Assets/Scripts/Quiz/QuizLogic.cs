@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class QuizLogic : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class QuizLogic : MonoBehaviour
     [SerializeField] TextMeshProUGUI answer2 = null;
     [SerializeField] TextMeshProUGUI answer3 = null;
     [SerializeField] TextMeshProUGUI score = null;
+    [SerializeField] GameObject resolutionCanvas = null;
 
     public string[] questions;
     public string[][] answers;
@@ -44,14 +46,17 @@ public class QuizLogic : MonoBehaviour
         {
             correct++;
             Debug.Log("Correct" + currentQuestionIndex);
-        } else
+            ShowAnswerResult(10);
+        }
+        else
         {
             Debug.Log("Wrong" + currentQuestionIndex);
         }
         NextQuestion();
     }
 
-    void NextQuestion() {
+    void NextQuestion()
+    {
         currentQuestionIndex++;
         if (currentQuestionIndex < questions.Length)
         {
@@ -67,4 +72,23 @@ public class QuizLogic : MonoBehaviour
             Debug.Log("Acabou");
         }
     }
+
+    void ShowAnswerResult(int score)
+    {
+        //change TextMeshProUGUI named  Score_Text from inside resolutionCanvas
+        resolutionCanvas.SetActive(true);
+
+        GameObject.Find("Score_Text").GetComponent<TextMeshProUGUI>().text = (score > 0 ? "+" : "") + score;
+        StartCoroutine(FadeGameObjectToZeroAlpha(1f, resolutionCanvas));
+    }
+    public IEnumerator FadeGameObjectToZeroAlpha(float t, GameObject i)
+    {
+        while (i.GetComponent<CanvasGroup>().alpha > 0.0f)
+        {
+            i.GetComponent<CanvasGroup>().alpha -= Time.deltaTime / t;
+            yield return null;
+        }
+        i.SetActive(false);
+    }
+
 }
