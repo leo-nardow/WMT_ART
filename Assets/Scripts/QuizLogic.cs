@@ -9,26 +9,26 @@ using UnityEngine.SceneManagement;
 
 public class QuizLogic : MonoBehaviour
 {
-    private TextMeshProUGUI question;
-    private TextMeshProUGUI answer0;
-    private TextMeshProUGUI answer1;
-    private TextMeshProUGUI answer2;
-    private TextMeshProUGUI answer3;
-    private TextMeshProUGUI scoreText;
-    private GameObject resolutionCanvas;
+    private static TextMeshProUGUI question;
+    private static TextMeshProUGUI answer0;
+    private static TextMeshProUGUI answer1;
+    private static TextMeshProUGUI answer2;
+    private static TextMeshProUGUI answer3;
+    private static TextMeshProUGUI scoreText;
+    private static GameObject resolutionCanvas;
 
-    public List<QuestionObject> questions;
+    public static List<QuestionObject> questions;
 
-    private int currentQuestionIndex = 0;
-    private float correct = 0;
-    private float total = 0;
+    private static int currentQuestionIndex = 0;
+    private static float correct = 0;
+    private static float total = 0;
 
-    private List<QuestionObject> _questions;
+    private static List<QuestionObject> _questions;
 
-    public void SaveAnsweredQuestion(int index)
+    public static void SaveAnsweredQuestion(int index)
     {
         GetQuestions();
-        this._questions[index].QuestionAnswered = true;
+        _questions[index].QuestionAnswered = true;
         SaveQuestions();
     }
 
@@ -41,8 +41,8 @@ public class QuizLogic : MonoBehaviour
         return sixRandomQuestions;
     }
 
-    private void GetQuestions() => this._questions = GameManagerBadges.Instance.GetQuestions();
-    private void SaveQuestions() => GameManagerBadges.Instance.SaveQuestions(this._questions);
+    private static void GetQuestions() => _questions = GameManagerBadges.Instance.GetQuestions();
+    private static void SaveQuestions() => GameManagerBadges.Instance.SaveQuestions(_questions);
 
     private void Awake()
     {
@@ -87,7 +87,7 @@ public class QuizLogic : MonoBehaviour
     //     SceneManager.LoadScene("Middle");
     // }
 
-    public void Answer(int answerIndex)
+    public static void Answer(int answerIndex)
     {
         Debug.Log("Answered");
         if (answerIndex == questions[currentQuestionIndex].CorrectAnswersIndex)
@@ -104,7 +104,7 @@ public class QuizLogic : MonoBehaviour
         NextQuestion();
     }
 
-    void NextQuestion()
+    static void NextQuestion()
     {
         currentQuestionIndex++;
         if (currentQuestionIndex < questions.Count)
