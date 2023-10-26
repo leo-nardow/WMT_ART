@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
 
     #region Variables
-
+    
     private Question[] _questions = null;
     public Question[] Questions { get { return _questions; } }
 
@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator IE_WaitTillNextRound = null;
     private IEnumerator IE_StartTimer = null;
 
+    
     private bool IsFinished
     {
         get
