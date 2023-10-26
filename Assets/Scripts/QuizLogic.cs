@@ -28,7 +28,7 @@ public class QuizLogic : MonoBehaviour
     public static void SaveAnsweredQuestion(int index)
     {
         GetQuestions();
-        _questions[index].QuestionAnswered = true;
+        _questions.Find(x => x.Index == index).QuestionAnswered = true;
         SaveQuestions();
     }
 
@@ -69,6 +69,7 @@ public class QuizLogic : MonoBehaviour
         correct = 0;
         total = 0;
         currentQuestionIndex = 0;
+        
 
         questions = GetSixRandomQuestions();
         total = questions.Count;
@@ -96,7 +97,7 @@ public class QuizLogic : MonoBehaviour
             correct++;
             AudioManager.Instance.PlaySound("CorrectSFX");
             // Debug.Log("Correct" + currentQuestionIndex);
-            SaveAnsweredQuestion(currentQuestionIndex);
+            SaveAnsweredQuestion(questions[currentQuestionIndex].Index);
         }
         else
         {

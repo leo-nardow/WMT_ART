@@ -20,7 +20,7 @@ public class GameManagerBadges : MonoBehaviour
         if (_instance != null && _instance != this)
         {
             Debug.Log("GameManagerBadges já existe na cena");
-            // Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
         else
         {
@@ -54,8 +54,12 @@ public class GameManagerBadges : MonoBehaviour
 
     private void GenerateQuestions()
     {
-        string json = File.ReadAllText("D:\\UFABC\\JDATA\\Puzzle\\Who Made This\\Assets\\Scripts\\Questoes_json.json"); // alterar caminho do JSON
+        string json = File.ReadAllText("C:\\Users\\casju\\Documents\\UFABC\\WMT_ART\\Assets\\Scripts\\Questoes_json.json"); // alterar caminho do JSON
         _questions = JsonConvert.DeserializeObject<List<QuestionObject>>(json);
+        for (int i = 0; i < _questions.Count; i++)
+        {
+            _questions[i].Index = i + 1;
+        }
     }
 
     public List<QuestionObject> GetQuestions() => this._questions;

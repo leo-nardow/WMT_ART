@@ -22,8 +22,7 @@ public class ShopManagerScript : MonoBehaviour
     {
         GameObject buttonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
 
-        Debug.Log(points + "/" + total);
-        if (points > total)
+        if (points >= total + 50)
         {
             if (cart[(int)EItemType.Quantity, buttonRef.GetComponent<ButtonInfo>().ItemId] == 0)
             {
