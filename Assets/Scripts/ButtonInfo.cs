@@ -14,7 +14,6 @@ public class ButtonInfo : MonoBehaviour
     {
         if (ItemId == 12) return;
         Badges = GameManagerBadges.Instance.GetBadges();
-        Debug.Log(Badges);
 
         if (QuantityTxt != null)
         {

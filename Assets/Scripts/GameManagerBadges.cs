@@ -9,7 +9,7 @@ public class GameManagerBadges : MonoBehaviour
     private static GameManagerBadges _instance;
     public static GameManagerBadges Instance { get { return _instance; } }
 
-    private int _points = 1010;
+    private int _points = 0;
 
     private int[,] _badges = new int[12, 12];
 
@@ -19,10 +19,13 @@ public class GameManagerBadges : MonoBehaviour
     {
         if (_instance != null && _instance != this)
         {
-            Destroy(this.gameObject);
+            Debug.Log("GameManagerBadges já existe na cena");
+            // Destroy(this.gameObject);
         }
         else
         {
+            Debug.Log("GameManagerBadges Nao existe na cena");
+
             GenerateBadges();
             GenerateQuestions();
 
@@ -57,4 +60,13 @@ public class GameManagerBadges : MonoBehaviour
 
     public List<QuestionObject> GetQuestions() => this._questions;
     public void SaveQuestions(List<QuestionObject> questions) => this._questions = questions;
+
+    public void ResetBadges()
+    {
+        GenerateBadges();
+    }
+    public void ResetQuestions()
+    {
+        GenerateQuestions();
+    }
 }

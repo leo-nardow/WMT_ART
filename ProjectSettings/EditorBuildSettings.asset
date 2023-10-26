@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MeusBadges.unity
     guid: ad8e76ad9f52c044e8e6284ec4e56c7b
+  - enabled: 1
+    path: Assets/Scenes/QuizScene.unity
+    guid: 62a16b31136636146a0be0f981fe5bd5
+  - enabled: 1
+    path: Assets/Scenes/Middle.unity
+    guid: 977bcdb445b9b5e43b73ae9f04d686ef
   m_configObjects: {}

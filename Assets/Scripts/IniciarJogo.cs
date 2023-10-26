@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class IniciarJogo : MonoBehaviour
 {
-    public void chamaJogo(){
-        SceneManager.LoadScene("SampleScene");
+    public void chamaJogo()
+    {
+        SceneManager.LoadScene("QuizScene");
     }
 }

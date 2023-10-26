@@ -24,6 +24,6 @@ public class BadgeManager : MonoBehaviour
 
     public void AbrirMenu()
     {
-        SceneManager.LoadScene("Intro_scene");
+        SceneManager.LoadScene("Middle");
     }
 }
