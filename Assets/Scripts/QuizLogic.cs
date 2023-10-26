@@ -94,11 +94,14 @@ public class QuizLogic : MonoBehaviour
         {
             GameManagerBadges.Instance.SavePoints(GameManagerBadges.Instance.GetPoints() + 10);
             correct++;
+            AudioManager.Instance.PlaySound("CorrectSFX");
             // Debug.Log("Correct" + currentQuestionIndex);
             SaveAnsweredQuestion(currentQuestionIndex);
         }
         else
         {
+            AudioManager.Instance.PlaySound("IncorrectSFX");
+
             // Debug.Log("Wrong" + currentQuestionIndex);
         }
         NextQuestion();
