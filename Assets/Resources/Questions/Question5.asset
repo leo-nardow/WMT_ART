@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1e3773ddaa9ce48835846fb8e11c7f, type: 3}
+  m_Name: Math
+  m_EditorClassIdentifier: 
+  _info: "O expressionismo \xE9 considerado o primeiro movimento de vanguarda europeia
+    que busca romper com a arte vigente at\xE9 ent\xE3o. Surgido no fim do s\xE9culo
+    XIX e in\xEDcio do s\xE9culo XX, esteve muito relacionado com seu contexto social
+    e hist\xF3rico, que trazia algumas particularidades e eventos marcantes, como:\r\n"
+  _answers:
+  - _info: "Segunda Guerra Mundial e o avan\xE7o do nazismo pela Alemanha"
+    _isCorrect: 0
+  - _info: "Primeira Guerra Mundial e o avan\xE7o da industrializa\xE7\xE3o"
+    _isCorrect: 1
+  - _info: Guerra Fria e a corrida armamentista
+    _isCorrect: 0
+  - _info: "Neocolonialismo e a invas\xE3o de territ\xF3rios na \xC1frica e na \xC1sia"
+    _isCorrect: 0
+  _useTimer: 1
+  _timer: 30
+  _answerType: 1
+  _addScore: 10

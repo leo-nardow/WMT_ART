@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1e3773ddaa9ce48835846fb8e11c7f, type: 3}
+  m_Name: KM
+  m_EditorClassIdentifier: 
+  _info: "Expressionismo \xE9 um movimento art\xEDstico que surgiu no in\xEDcio do
+    s\xE9culo XX, especialmente nas artes visuais, literatura, teatro e cinema. Ele
+    fez parte das vanguardas europeias. Logo:\r\n"
+  _answers:
+  - _info: "Desejavam retornar a arte tradicional, primordialmente de cunho acad\xEAmico"
+    _isCorrect: 0
+  - _info: "Buscavam interromper a renova\xE7\xE3o est\xE9tica nas artes europeias\r\n\n"
+    _isCorrect: 0
+  - _info: "possu\xEDam um esp\xEDrito libert\xE1rio, contido e  n\xE3o contestador.\r\n"
+    _isCorrect: 0
+  - _info: "Buscavam romper com a tradi\xE7\xE3o cl\xE1ssica de fazer arte."
+    _isCorrect: 1
+  _useTimer: 1
+  _timer: 30
+  _answerType: 1
+  _addScore: 10

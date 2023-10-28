@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1e3773ddaa9ce48835846fb8e11c7f, type: 3}
+  m_Name: Question19
+  m_EditorClassIdentifier: 
+  _info: "No contexto da Primeira Guerra Mundial, surgiu o dada\xEDsmo, um movimento
+    antiart\xEDstico, antiliter\xE1rio, antipo\xE9tico, contra a beleza eterna, a
+    harmonia, a objetividade, a eternidade dos princ\xEDpios, as leis da l\xF3gica,
+    a imobilidade do pensamento e a favor da liberdade desenfreada do indiv\xEDduo,
+    da espontaneidade, do aleat\xF3rio, da anarquia contra a ordem, da imperfei\xE7\xE3o
+    contra a perfei\xE7\xE3o.Atribua V (verdadeiro) ou F (falso) \xE0s afirmativas
+    a seguir.\r\n( ) O dada\xEDsmo tem uma base positivista tanto quanto o surrealismo.\r\n(
+    ) No processo de cria\xE7\xE3o dada\xEDsta, se \xE9 que se trata de cria\xE7\xE3o,
+    o verbo \u201Ccriar\u201D foi substitu\xEDdo pelo verbo \u201Cmontar\u201D.\r\n(
+    ) O car\xE1ter antiart\xEDstico das colagens dada\xEDstas constitu\xEDa um modelo
+    est\xE9tico baseado no acaso.\r\n( ) Para o dada\xEDsmo, o gesto provocativo
+    era mais importante do que a obra.\r\n( ) O movimento dad\xE1, por ser favor\xE1vel
+    \xE0 sociedade burguesa, foi contra a arte que a questionava.\r\n"
+  _answers:
+  - _info: F, V, F, V, F.
+    _isCorrect: 1
+  - _info: V, F, F, F, V.
+    _isCorrect: 0
+  - _info: ' F, V, V, F, V.'
+    _isCorrect: 0
+  - _info: V, F, V, V, F.
+    _isCorrect: 0
+  _useTimer: 0
+  _timer: 30
+  _answerType: 1
+  _addScore: 25
