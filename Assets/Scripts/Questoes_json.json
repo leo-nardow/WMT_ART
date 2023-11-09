@@ -180,16 +180,6 @@
         "correctAnswersIndex": 3
     },
     {
-        "question": "No contexto da Primeira Guerra Mundial, surgiu o dadaísmo, um movimento antiartístico, antiliterário, antipoético, contra a beleza eterna, a harmonia, a objetividade, a eternidade dos princípios, as leis da lógica, a imobilidade do pensamento e a favor da liberdade desenfreada do indivíduo, da espontaneidade, do aleatório, da anarquia contra a ordem, da imperfeição contra a perfeição. Atribua V (verdadeiro) ou F (falso) às afirmativas a seguir.",
-        "answers": [
-            "V, F, V, V, F",
-            "V, F, F, F, V",
-            "F, V, V, F, V",
-            "F, V, F, V, F"
-        ],
-        "correctAnswersIndex": 3
-    },
-    {
         "question": "Qual princípio fundamental do dadaísmo enfatizava a rejeição da lógica e da razão?",
         "answers": [
             "O amor à natureza",
