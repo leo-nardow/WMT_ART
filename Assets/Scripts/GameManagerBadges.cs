@@ -47,7 +47,7 @@ public class GameManagerBadges : MonoBehaviour
         foreach (EArtType artType in Enum.GetValues(typeof(EArtType)))
         {
             _badges[(int)EItemType.ArtType, (int)artType] = (int)artType;
-            _badges[(int)EItemType.Price, (int)artType] = 50;
+            _badges[(int)EItemType.Price, (int)artType] = 30;
             _badges[(int)EItemType.Quantity, (int)artType] = 0;
         }
     }
